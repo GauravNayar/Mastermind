@@ -1,7 +1,7 @@
 /*
  * MasterMind: a cut down version with just the master-mind game logic (purely C) and no external devices
 
- Sample run:
+Sample run:
 Contents of the sequence (of length 3):  2 1 1
 Input seq (len 3): 1 2 3
 0 2
@@ -11,7 +11,7 @@ Input seq (len 3): 2 1 1
 3 0
 SUCCESS after 3 iterations; secret sequence is  2 1 1
 
- * Compile:    gcc -o mmt  master_mind_terminal.c
+ * Compile:    gcc -o mmt  master-mind-terminal.c
  * Run:        ./mmt
 
  */
