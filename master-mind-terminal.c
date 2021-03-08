@@ -44,27 +44,28 @@ static int* theSeq = NULL;
 
 /* initialise the secret sequence; by default it should be a random sequence, with -s use that sequence */
 void initSeq() {
-  /* complete the code here */
+  /* COMPLETE the code here */
 }
 
+/* display the sequence on the terminal window, using the format from the sample run above */
 void showSeq(int *seq) {
-  /* complete the code here */
+  /* COMPLETE the code here */
 }
 
 /* counts how many entries in seq2 match entries in seq1 */
-/* returns exact and contained matches as a base seqlen encoding */
+/* returns exact and approximate matches  */
 int countMatches(int *seq1, int *seq2) {
-  /* complete the code here */
+  /* COMPLETE the code here */
 }
 
 /* show the results from calling countMatches on seq1 and seq1 */
 void showMatches(int code, /* only for debugging */ int * seq1, int *seq2) {
-  /* complete the code here */
+  /* COMPLETE the code here */
 }
 
 /* read a guess sequence fron stdin and store the values in arr */
 void readString(int *arr) {
-  /* complete the code here */
+  /* COMPLETE the code here */
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -88,7 +89,7 @@ int main(int argc, char **argv){
 	debug = 1;
 	break;
       case 's':
-	sseq = (char *)malloc(4*sizeof(char));
+	sseq = (char *)malloc(LEN*sizeof(char));
 	strcpy(sseq,optarg);
 	break;
       default: /* '?' */
@@ -102,8 +103,8 @@ int main(int argc, char **argv){
     }
 
     if (verbose && unittest) {
-      printf("1st named argument = %s\n", argv[optind]);
-      printf("2nd named argument = %s\n", argv[optind+1]);
+      printf("1st argument = %s\n", argv[optind]);
+      printf("2nd argument = %s\n", argv[optind+1]);
     }
   }
 
@@ -116,10 +117,10 @@ int main(int argc, char **argv){
   }
 
   if (sseq) { // explicitly setting secret sequence
-    /* set the secret sequence here */
+    /* SET the secret sequence here */
   }    
   if (unittest) {
-    /* set secret and guess sequence here */
+    /* SET secret and guess sequence here */
     /* then run the countMatches function and show the result */
   }
 
@@ -128,7 +129,7 @@ int main(int argc, char **argv){
   // +++++ main loop
   while (!found) {
     attempts++;
-    /* implement the main game logic here */
+    /* IMPLEMENT the main game logic here */
   }
 
   if (found) {

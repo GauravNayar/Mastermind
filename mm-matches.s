@@ -18,21 +18,15 @@
 .text
 .global         main
 main: 
-	LDR  R2, =secret	@ pointer to secret string
-	LDR  R3, =guess		@ pointer to guess string
+	LDR  R2, =secret	@ pointer to secret sequence
+	LDR  R3, =guess		@ pointer to guess sequence
 
 	@ you probably need to initialise more values here
 
 	@ ... COMPLETE THE CODING BY ADDING YOUR CODE HERE, you may want to use sub-routines to structure your code
 
 exit:	@MOV	 R0, R4		@ load result to output register
-	LDR      R5, =answer
-	LDR	 R0, [R5]
-	MOV      R9, #10
-	MUL	 R0, R0, R9
-	LDR	 R8, [R5, #4]
-	ADD      R0, R8
-exit99:	MOV 	 R7, #1		@ load system call code
+	MOV 	 R7, #1		@ load system call code
 	SWI 	 0		@ return this value
 	
 @ =============================================================================
@@ -41,7 +35,7 @@ exit99:	MOV 	 R7, #1		@ load system call code
 
 @ constants about the basic setup of the game: length of sequence and number of colors	
 .equ LEN, 3
-.equ COLORS, 3
+.equ COL, 3
 .equ NAN1, 8
 .equ NAN2, 9
 

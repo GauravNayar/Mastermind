@@ -10,18 +10,20 @@ This folder contains the CW3 specification template files for the source code an
 
 **Push** to the repo and ask questions in the comments box to get help.
 
-The final version of the code should be pushed to this repo, and also submitted through Vision.
+Separate solutions for the C and the Assembler part should be submitted. They **don't** need to be integrated.
+
+The final version of the code should be pushed to this repo, and also submitted through Vision, together with the report.
 
 Use [this link](https://docs.google.com/spreadsheets/d/1iUMkIK1-76qp3_G4s9Qvd1huxu94v4ikyB0Ya0PGypQ/edit?usp=sharing) to sign-up as a pair for this pair project.
 
 Links:
-- Use the (https://cpulator.01xz.net/?sys=arm-de1soc&d_audio=48000}[CPUlator] for running the ARM Assembler code
+- Use the [CPUlator](https://cpulator.01xz.net/?sys=arm-de1soc&d_audio=48000} for running the ARM Assembler code
 - You can use any machine with an installation of the `gcc` C compiler for running the C code of the game logic
 - Template for the C program: [master-mind-terminal.c](master-mind-terminal.c)
 - Template for the ARM Assembler program: [mm-matches.s](mm-matches.s)
 - Pick up your personal input data from this web-page, replacing `USERID` with your HWU user-id: [https://www.macs.hw.ac.uk/~hwloidl/Courses/F28HS/CW_Data/USERID.txt](https://www.macs.hw.ac.uk/~hwloidl/Courses/F28HS/CW_Data/USERID.txt)
 
-This is an example of doing unit-testing on 2 sequences (C part only; the Assembler version should show the numbers on the two right-most HEX-displays):
+This is an example of doing unit-testing on 2 sequences (C part only; the Assembler version, running on the CPUlator, should show the numbers on the two right-most HEX-displays):
 ```
 > ./mmt -u 121 313
 0 exact matches
