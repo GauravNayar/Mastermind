@@ -17,7 +17,7 @@ The final version of the code should be pushed to this repo, and also submitted 
 Use [this link](https://docs.google.com/spreadsheets/d/1iUMkIK1-76qp3_G4s9Qvd1huxu94v4ikyB0Ya0PGypQ/edit?usp=sharing) to sign-up as a pair for this pair project.
 
 Links:
-- Use the [CPUlator](https://cpulator.01xz.net/?sys=arm-de1soc&d_audio=48000} for running the ARM Assembler code
+- Use the [CPUlator](https://cpulator.01xz.net/?sys=arm-de1soc&d_audio=48000) for running the ARM Assembler code
 - You can use any machine with an installation of the `gcc` C compiler for running the C code of the game logic
 - Template for the C program: [master-mind-terminal.c](master-mind-terminal.c)
 - Template for the ARM Assembler program: [mm-matches.s](mm-matches.s)
@@ -41,4 +41,9 @@ Input seq (len 3): 3 2 1
 Input seq (len 3): 2 1 1
 3 0
 SUCCESS after 3 iterations; secret sequence is  2 1 1
+```
+
+The general format for the command line is as follows (see template code in master-mind-terminal.c for processing command line options):
+```
+./mmt [-v] [-d] [-s] <secret sequence> [-u] <sequence1> <sequence2>
 ```
