@@ -126,6 +126,10 @@ int main(int argc, char **argv){
   if (unittest) {
     /* SET secret and guess sequence here */
     /* then run the countMatches function and show the result */
+
+    /* for now just terminate; DELETE these two lines, once you have an implementation for -u in here */
+    fprintf(stdout, "INCOMPLETE implementation, terminating program\n");
+    return EXIT_FAILURE;
   }
 
   // -----------------------------------------------------------------------------
