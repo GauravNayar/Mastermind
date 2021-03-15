@@ -11,8 +11,8 @@ Input seq (len 3): 2 1 1
 3 0
 SUCCESS after 3 iterations; secret sequence is  2 1 1
 
- * Compile:    gcc -o mmt  master-mind-terminal.c
- * Run:        ./mmt
+ * Compile:    gcc -o cw3  master-mind-terminal.c
+ * Run:        ./cw3
 
  */
 
@@ -72,12 +72,16 @@ void readString(int *arr) {
 
 int main(int argc, char **argv){
   /* DEFINE your variables here */
+  int found = 0, attempts = 0;
+  /* for getopts() command line processing */
+  int verbose = 0, help = 0, unittest = 0, debug = 0;
+  char *sseq = NULL;
 
   // see: man 3 getopt for docu and an example of command line parsing
   // Use this template to process command line options and to store the input
   {
     int opt;
-    while ((opt = getopt(argc, argv, "vds:")) != -1) {
+    while ((opt = getopt(argc, argv, "vuds:")) != -1) {
       switch (opt) {
       case 'v':
 	verbose = 1;
@@ -93,7 +97,7 @@ int main(int argc, char **argv){
 	strcpy(sseq,optarg);
 	break;
       default: /* '?' */
-	fprintf(stderr, "Usage: %s [-v] [-d] [-u] [-s] <secret sequence>\n", argv[0]);
+	fprintf(stderr, "Usage: %s [-v] [-d] [-s] <secret sequence> [-u] <secret sequence> <guess sequence> \n", argv[0]);
 	exit(EXIT_FAILURE);
       }
     }
