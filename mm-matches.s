@@ -67,3 +67,35 @@ guess:	.word 3
 expect: .byte 0
 	.byte 1
 
+.align 4
+secret1: .word 1 
+	.word 2 
+	.word 3 
+
+.align 4
+guess1:	.word 1 
+	.word 1 
+	.word 2 
+
+@ Not strictly necessary, but can be used to test the result	
+@ Expect Answer: 1 1
+.align 4
+expect1: .byte 1
+	.byte 1
+
+.align 4
+secret2: .word 2 
+	.word 3
+	.word 2 
+
+.align 4
+guess2:	.word 3 
+	.word 3 
+	.word 1 
+
+@ Not strictly necessary, but can be used to test the result	
+@ Expect Answer: 1 0
+.align 4
+expect2: .byte 1
+	.byte 0
+

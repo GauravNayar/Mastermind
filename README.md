@@ -11,12 +11,11 @@ This folder contains the CW3 specification template files for the source code an
 **Push** to the repo and ask questions in the comments box to get help.
 
 You can build the C program, starting from the template in `master-mind-terminal.c`, by typing
- : make
+ > make
 and run the Master Mind program in debug mode by typing
- : make run
+ > make run
 and do unit testing on the matching function
- : make unit
-
+ > make unit
 
 For the Assembler part, you need to edit the `mm-matches.s` file, upload and execute them to the CPUlator.
 See the test input data in the `secret` and `guess` structures at the end of the file, for testing.
@@ -25,8 +24,11 @@ Separate solutions for the C and the Assembler part should be submitted. They **
 
 The final version of the code should be pushed to this repo, and also submitted through Vision, together with the report.
 
-A test script is available to do unit-testing of the matching function. Run it like this
-- sh ./test.sh
+A test script is available to do unit-testing of the matching function. Run it like this from the command line
+ > sh ./test.sh
+To test whether all tests have been successful you can do
+ > echo $?
+which should print `0`.
 
 If you picked up the `.gitlab-ci.yml` file in this repo, this test will be done automatically when uploading the file and you will get either a Pass or Fail in the CI section of the gitlab-student server.
 
